@@ -1,3 +1,3 @@
 # GaiaCodables
 
-A description of this package.
+Codables which will be used to communicate between iOS App and backend
