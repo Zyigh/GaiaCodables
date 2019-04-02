@@ -5,13 +5,13 @@ public enum Level: Int, Codable {
 }
 
 public struct User : Codable {
-    let id: UUID?
-    let email: String?
-    let nickname: String?
-    let password: String?
-    var missions = [Mission]()
-    let level: Level
-    let elo : Elo
+    public var id: UUID?
+    public var email: String?
+    public var nickname: String?
+    public var password: String?
+    public var missions = [Mission]()
+    public var level: Level
+    public var elo : Elo
 
     public init(
             id: UUID?,
@@ -33,21 +33,21 @@ public struct User : Codable {
 }
 
 public struct Mission : Codable {
-    let id: UUID?
+    public var id: UUID?
 //    let duration: DateInterval?
-    let duration: String?
-    let description: String?
-    let image: String?
-    let mainSubject: String?
-    let explanations: String?
-    let tips : [String]?
-    let elo : Elo
+    public var duration: String?
+    public var description: String?
+    public var image: String?
+    public var mainSubject: String?
+    public var explanations: String?
+    public var tips : [String]?
+    public var elo : Elo
 }
 
 public struct Elo : Codable {
-    let energy : Int
-    let waste : Int
-    let food : Int
+    public var energy : Int
+    public var waste : Int
+    public var food : Int
 
     public init(
             energy: Int,
