@@ -12,16 +12,16 @@ public struct User : Codable {
     public var missions = [Mission]()
     public var level: Level
     public var elo : Elo
-
+    
     public init(
-            id: UUID?,
-            email: String?,
-            nickname: String?,
-            password: String?,
-            missions: [Mission]?,
-            level: Level,
-            elo : Elo
-    ) {
+        id: UUID?,
+        email: String?,
+        nickname: String?,
+        password: String?,
+        missions: [Mission]?,
+        level: Level,
+        elo : Elo
+        ) {
         self.id = id
         self.email = email
         self.nickname = nickname
@@ -34,7 +34,7 @@ public struct User : Codable {
 
 public struct Mission : Codable {
     public var id: UUID?
-//    let duration: DateInterval?
+    //    let duration: DateInterval?
     public var duration: String?
     public var description: String?
     public var image: String?
@@ -42,18 +42,37 @@ public struct Mission : Codable {
     public var explanations: String?
     public var tips : [String]?
     public var elo : Elo
+    
+    public init(id: UUID?,
+                duration: String?,
+                description: String?,
+                image: String?,
+                mainSubject: String?,
+                explanations: String?,
+                tips : [String]?,
+                elo : Elo
+        ) {
+        self.id = id
+        self.duration = duration
+        self.description = description
+        self.image = image
+        self.mainSubject = mainSubject
+        self.explanations = explanations
+        self.tips  = tips
+        self.elo  = elo
+    }
 }
 
 public struct Elo : Codable {
     public var energy : Int
     public var waste : Int
     public var food : Int
-
+    
     public init(
-            energy: Int,
-            waste: Int,
-            food: Int
-    ) {
+        energy: Int,
+        waste: Int,
+        food: Int
+        ) {
         self.energy = energy
         self.waste = waste
         self.food = food
